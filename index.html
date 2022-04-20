@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" async></script>
+</head>
+<body>
+    
+    <h1 class="page-title">Pokémon </h1> 
+    <h2 class="page-title second-heading">M e m o r y - M a t c h</h2>
+    
+
+    <div class="overlay-text visible">
+        
+        Click to Start<img class="welcome overlay-image" src="Assets/Img/welcome.png">
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        Game-Over
+        <img class="gameover-image overlay-image" src="Assets/Img/gameover.png">
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        Victory
+        <img class="victory-image overlay-image" src="Assets/Img/victory.png">
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+
+    
+    <div class="game-info-container">
+        <div class="game-info">
+            Time <span id="time-remaining">100</span>
+        </div>
+        <div class="game-info">
+            Flips <span id="flips">0</span>
+        </div>
+    </div>
+    <div class="memory-game">
+        <div class="memory-card" data-framework="pikachu">
+            <img class="front-face memory-card-value" src="Assets/Img/pikachu.png" alt="pikachu">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="pikachu">
+            <img class="front-face memory-card-value" src="Assets/Img/pikachu.png" alt="pikachu">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="bulbasaur">
+            <img class="front-face memory-card-value" src="Assets/Img/bulbasaur.png" alt="bulbasaur">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="bulbasaur">
+            <img class="front-face memory-card-value" src="Assets/Img/bulbasaur.png" alt="bulbasaur">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="squirtle">
+            <img class="front-face memory-card-value" src="Assets/Img/squirtle.png" alt="squirtle">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="squirtle">
+            <img class="front-face memory-card-value" src="Assets/Img/squirtle.png" alt="squirtle">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="totodile">
+            <img class="front-face memory-card-value" src="Assets/Img/totodile.png" alt="totodile">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="totodile">
+            <img class="front-face memory-card-value" src="Assets/Img/totodile.png" alt="totodile">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="ninetales">
+            <img class="front-face memory-card-value" src="Assets/Img/ninetales.png" alt="ninetales">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="ninetales">
+            <img class="front-face memory-card-value" src="Assets/Img/ninetales.png" alt="ninetales">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="eevee">
+            <img class="front-face memory-card-value" src="Assets/Img/eevee.png" alt="eevee">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="eevee">
+            <img class="front-face memory-card-value" src="Assets/Img/eevee.png" alt="eevee">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="gengar">
+            <img class="front-face memory-card-value" src="Assets/Img/gengar.png" alt="gengar">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="gengar">
+            <img class="front-face memory-card-value" src="Assets/Img/gengar.png" alt="gengar">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="dragonite">
+            <img class="front-face memory-card-value" src="Assets/Img/dragonite.png" alt="dragonite">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+        <div class="memory-card" data-framework="dragonite">
+            <img class="front-face memory-card-value" src="Assets/Img/dragonite.png" alt="dragonite">
+            <img class="back-face memory-card-value" src="Assets/Img/pokeball.png" alt="pokeball">
+        </div>
+    </div>
+    
+</body>
+</html>

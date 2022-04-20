@@ -1,0 +1,168 @@
+@font-face {
+    font-family: "Pokemon Solid";
+    src: url("Assets/Fonts/Pokemon\ Solid.woff") format("woff"), url("Assets/Fonts/Pokemon\ Solid.woff2") format("woff2");
+}
+
+
+@font-face {
+    font-family: "Creepy";
+    src: url("Assets/Fonts/Creepy.woff") format("woff"), url("Assets/Fonts/Creepy.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lunacy";
+    src: url("Assets/Fonts/Lunacy.woff") format("woff"), url("Assets/Fonts/Lunacy.woff2") format("woff2");
+}
+
+*{
+    padding: 0;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100vh;
+}
+
+body{
+    margin: 0;
+    background: radial-gradient(#059ff8,#040275 );
+}
+
+.page-title {
+
+    color: #d6d320;
+    font-family: "Pokemon Solid", sans-serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 5em;
+    text-shadow: -4px 4px 0 #000,
+                    4px 4px 0 #06005c,
+                    4px -4px 0 #06005c,
+                    -4px -4px 0 #06005c;
+}
+
+.second-heading {
+    font-size: 2.2em;
+}
+
+.overlay-text {
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center; 
+    z-index: 100;
+    color:#d6d320;
+    text-shadow: -4px 4px 0 #000,
+                    4px 4px 0 #06005c,
+                    4px -4px 0 #06005c,
+                    -4px -4px 0 #06005c;
+    font-family: "Pokemon Solid", sans-serif;
+    font-weight: normal;
+}
+
+.overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 1s forwards;
+}
+
+.overlay-text-small {
+    font-size: 0.4em;
+}
+
+@keyframes overlay-grow {
+    from {
+        background: rgba(0, 0, 0, 1);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.9);
+        font-size: 6em;
+    }
+}
+
+.overlay-image {
+    height: 50vh;
+}
+
+.game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    width: 80vh;
+}
+
+.game-info{
+    color:#63d620;
+    font-size: 2.1em;
+    text-shadow: -1.2px 1.2px 0 #000,
+                    1.2px 1.2px 0 #06005c,
+                    1.2px -1.2px 0 #06005c,
+                    -1.2px -1.2px 0 #06005c;
+    font-family: Roboto, serif;
+    width: 30vh;
+}
+
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    width: 75vh;
+    height: 75vh;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    justify-content: center;
+    grid-template-columns: repeat(4,auto);
+}
+
+.memory-card {
+    width: 24%;
+    height: 24%;
+    margin: 0.5%;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.memory-card:active {
+    transform: scale(1);
+    transition: transform 0.2s;
+}
+
+.memory-card.visible {
+    transform: rotateY(180deg);
+}
+
+.memory-card-value {
+    transform: scale(0.9);
+}
+
+.memory-card:hover .back-face{
+    transform: scale(1);
+}
+
+.memory-card-value {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border-radius: 6%;
+    border-style: solid;
+    overflow: hidden;
+    background: #65b3fc;
+    backface-visibility: hidden;
+    transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+
+.front-face{
+    transform: rotateY(180deg);
+}
